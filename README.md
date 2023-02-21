@@ -2,7 +2,7 @@
 ros notes and important keywords
 
 
-#1 Details for rospack
+## 1 Details for rospack ##
 http://docs.ros.org/en/independent/api/rospkg/html/rospack.html
 rospack is the ROS package management tool
 1) rospack find : return the absolute path to a package
