@@ -22,3 +22,7 @@ For seeing more information with roslaunch you can try
 ```
 rqt_graph
 ```
+## 5) Predefined materials in gazebo to be used directly in URDF file 
+```
+vim /usr/share/gazebo-11/media/materials/scripts/gazebo.material
+```
