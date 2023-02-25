@@ -14,3 +14,5 @@ rospack is the ROS package management tool
 ```
 rosrun rqt_image_view rqt_image_view
 ```
+For seeing more information with roslaunch you can try 
+```roslaunch -v <package-name> <launch-name>``` to request verbosity output.
