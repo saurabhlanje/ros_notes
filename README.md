@@ -26,3 +26,7 @@ rqt_graph
 ```
 vim /usr/share/gazebo-11/media/materials/scripts/gazebo.material
 ```
+
+## 6) Tutorial Series ##
+
+### 1) [(https://roboticscasual.com/ros-tutorial-simulate-ur5-robot-in-gazebo-urdf-explained)]/###
