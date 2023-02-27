@@ -38,3 +38,7 @@ roslaunch gazebo_ros empty_world.launch
 ```
 rosrun gazebo_ros spawn_model -file /<path-to-your-gazebo-urdf-file>/ur5_gazebo.urdf -urdf -x 0 -y 0 -z 0.1 -model ur5
 ```
+### 8) Spawn urdf file in launch file###
+```
+<param name="robot_description" command="cat '$(find robot_description)/urdf/robot.urdf'" />
+```
