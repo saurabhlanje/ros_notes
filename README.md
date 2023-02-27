@@ -42,3 +42,7 @@ rosrun gazebo_ros spawn_model -file /<path-to-your-gazebo-urdf-file>/ur5_gazebo.
 ```
 <param name="robot_description" command="cat '$(find robot_description)/urdf/robot.urdf'" />
 ```
+### 9) Spawn xacro file in launch file ###
+```
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robot_description)/urdf/robot.xacro'"/>
+ ```
