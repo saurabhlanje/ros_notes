@@ -67,3 +67,23 @@ rosrun gazebo_ros spawn_model -file /<path-to-your-gazebo-urdf-file>/ur5_gazebo.
 
 </launch>
 ```
+
+### 11) Open urdf in rviz with launch file ###
+```
+<?xml version="1.0"?>
+<launch>
+    <arg name="rvizconfig" default="$(find robot_description)/rviz/urdf.rviz" />
+
+  <param name="robot_description" command="cat '$(find robot_description)/urdf/robot.urdf'"/>
+
+  <!-- send fake joint values -->
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
+```
