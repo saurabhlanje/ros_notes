@@ -87,4 +87,9 @@ rosrun gazebo_ros spawn_model -file /<path-to-your-gazebo-urdf-file>/ur5_gazebo.
 
 </launch>
 ```
-### 12) If gazebo simulation is unstable i.e. if robot behaves randomly not as per expection then increase the internation in the physics tab solver properties###
+### 12) If gazebo simulation is unstable i.e. if robot behaves randomly not as per expection then increase the internation in the physics tab solver properties ###
+
+### 13) Download gazebo models ###
+```
+http://machineawakening.blogspot.com/2015/05/how-to-download-all-gazebo-models.html
+```
