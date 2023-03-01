@@ -93,3 +93,7 @@ rosrun gazebo_ros spawn_model -file /<path-to-your-gazebo-urdf-file>/ur5_gazebo.
 ```
 http://machineawakening.blogspot.com/2015/05/how-to-download-all-gazebo-models.html
 ```
+
+### 14) If you need multiple shapes in one link within urdf file it can be added with another visual tag with both tags named ###
+explained here
+```http://wiki.ros.org/urdf/XML/link```
