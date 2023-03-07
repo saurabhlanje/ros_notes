@@ -100,6 +100,5 @@ explained here
 
 ### 15) Load newly created ROS node ###
 ```
-```
 rospack profile
 ```
