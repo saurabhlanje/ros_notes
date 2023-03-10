@@ -102,3 +102,7 @@ explained here
 ```
 rospack profile
 ```
+### 16) Plot the topics ###
+```
+rosrun rqt_gui rqt_gui
+```
