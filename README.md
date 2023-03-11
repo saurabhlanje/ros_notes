@@ -106,3 +106,12 @@ rospack profile
 ```
 rosrun rqt_gui rqt_gui
 ```
+
+### 17) Check URDF file ###
+```
+check_urdf pr2.urdf
+```
+### 18) Check URDF file graphically ###
+```
+urdf_to_graphiz pr2.urdf
+```
