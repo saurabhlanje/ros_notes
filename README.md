@@ -102,7 +102,7 @@ explained here
 ```
 rospack profile
 ```
-### 16) Plot the topics ###
+### 16) Plot monitor and publish the topics ###
 ```
 rosrun rqt_gui rqt_gui
 ```
