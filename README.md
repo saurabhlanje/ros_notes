@@ -102,7 +102,7 @@ explained here
 ```
 rospack profile
 ```
-### 16) Plot monitor and publish the topics ###
+### 16) Plot the topics ###
 ```
 rosrun rqt_gui rqt_gui
 ```
@@ -115,3 +115,7 @@ check_urdf pr2.urdf
 ```
 urdf_to_graphiz pr2.urdf
 ```
+### 19) ROS control ###
+#### 1) ros_control consist of controller interfaces, controller managers, transmissions, hardware_interfaces, and the control_toolbox ####
+#### 2) os_control packages take the joint state data and an input set point(goal) as input, and sends the appropriate command to the actuators as an output (typically an effort command), in order to achieve the provided set point(goal) given the actual joint states. ####
+
