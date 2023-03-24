@@ -9,6 +9,9 @@ rospack is the ROS package management tool
 2) ```rospack depends``` : return a list of all of a package’s dependencies
 3) ```rospack depends-on``` : return a list of packages that depend on the given package
 4) ```rospack export``` : return flags necessary for building and linking against a package
+5) ```rospack profile```: Load newly created ROS node
+6) ```rospack list```: list all available packages
+7) ```rospack list | grep my_package```: List the packages which contains string "my_package"
 
 ## 2) View video feed captured by camera ##
 ```
@@ -98,10 +101,7 @@ http://machineawakening.blogspot.com/2015/05/how-to-download-all-gazebo-models.h
 explained here
 ```http://wiki.ros.org/urdf/XML/link```
 
-### 15) Load newly created ROS node ###
-```
-rospack profile
-```
+
 ### 16) Plot the topics ###
 ```
 rosrun rqt_gui rqt_gui
