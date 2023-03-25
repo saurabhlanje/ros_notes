@@ -138,4 +138,8 @@ urdf_to_graphiz pr2.urdf
 ### 22) Print only last value published by topic ###
 ```rostopic echo /topic_name -n1```
 
+### 23) Get help on rostopic echo ###
+``` rostopic echo -h ```
+Similar way other commands in rostopic have help menu
+
 
