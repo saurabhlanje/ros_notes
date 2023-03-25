@@ -130,4 +130,9 @@ urdf_to_graphiz pr2.urdf
 ### 20) Build only specific package ###
 ```catkin_make --only-pkg-with-deps package_name ```
 
+### 21) Parameter server ###
+```rosparam list```: Get list of all parameters
+```rosparam get parameter_name``` : Get specific parameter value
+```rosparam set parameter_name value : Set specific parameter value
+
 
