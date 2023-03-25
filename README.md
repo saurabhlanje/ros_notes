@@ -135,4 +135,7 @@ urdf_to_graphiz pr2.urdf
 ```rosparam get parameter_name``` : Get specific parameter value
 ```rosparam set parameter_name value : Set specific parameter value
 
+### 22) Print only last value published by topic ###
+```rostopic echo /topic_name -n1```
+
 
