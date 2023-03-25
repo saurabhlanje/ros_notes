@@ -142,4 +142,10 @@ urdf_to_graphiz pr2.urdf
 ``` rostopic echo -h ```
 Similar way other commands in rostopic have help menu
 
+### 24) Get details of various type of ros msgs ###
+``` rosmsg show <message>```
+Example
+```rosmsg show std_msgs/Int32```
+```rosmsg show geometry_msgs/``` press tab to know available msgs
+
 
