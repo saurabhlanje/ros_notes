@@ -151,4 +151,56 @@ Example
 ### 25) ROS cheatsheet ###
 ```https://mirror.umd.edu/roswiki/attachments/de/ROScheatsheet.pdf```
 
+### 26) xacro ###
+####a) Convert xacro to urdf####
+``` xacro --inorder model.xacro > model.urdf ```
+####b) All formulas are computed using float####
+####c) Link example with macros####
+```
+<xacro:property name="width" value="0.2" />
+<xacro:property name="bodylen" value="0.6" />
+<link name="base_link">
+    <visual>
+        <geometry>
+            <cylinder radius="${width}" length="${bodylen}"/>
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+        <geometry>
+            <cylinder radius="${width}" length="${bodylen}"/>
+        </geometry>
+    </collision>
+</link>
+```
+
+####e) Example for link length ####
+```
+<xacro:property name=”robotname” value=”marvin” />
+<link name=”${robotname}s_leg” />
+```
+This will generate
+```<link name=”marvins_leg” />```
+
+####f) Macro to generate the inertia property of link####
+```
+    <xacro:macro name="default_inertial" params="mass">
+        <inertial>
+                <mass value="${mass}" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                     iyy="1.0" iyz="0.0"
+                     izz="1.0" />
+        </inertial>
+    </xacro:macro>
+```
+This can be used as
+```
+<xacro:default_inertial mass="10"/>
+```
+
+####b) ####
+
+
+
+
 
