@@ -14,3 +14,6 @@
 ### 5 Collision checking ###
 ### 6 Control ###
 ### 7 Navigation ###
+
+## What is motion planning ##
+Plan a movement from point A to point B without any collision with objects
