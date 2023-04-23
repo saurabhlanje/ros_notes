@@ -17,3 +17,6 @@
 
 ## What is motion planning ##
 Plan a movement from point A to point B without any collision with objects
+
+## Launch moveit assistance ##
+```roslaunch moveit_setup_assistant setup_assistant.launch```
