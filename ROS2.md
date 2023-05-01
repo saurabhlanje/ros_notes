@@ -39,4 +39,20 @@ This is for python
 ### 8) Find package with specific keywords ###
 ```ros2 pkg list | grep my_package```
 
+### 9) Build only some specific package and their dependencies ###
+```colcon build --packages-select <package_name>```
+
+### 10) Example launch file ###
+```from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='turtlebot3_teleop',
+            executable='teleop_keyboard',
+            output='screen'),
+    ])
+```
+
 
