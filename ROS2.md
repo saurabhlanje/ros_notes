@@ -43,7 +43,8 @@ This is for python
 ```colcon build --packages-select <package_name>```
 
 ### 10) Example launch file ###
-```from launch import LaunchDescription
+```
+from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
