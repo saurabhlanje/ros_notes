@@ -3,7 +3,7 @@ For instance, ROS2 includes real-time features and embedded security, and it is 
 
 # ROS2 Basics #
 ## Basic Concepts ##
-### Launch executable ###
+### 1) Launch executable ###
 ```ros2 run <package_name> <executable_file>```
-### Launch the launch file ###
+### 2) Launch the launch file ###
 ```ros2 launch <package_name> <launch_file>```
