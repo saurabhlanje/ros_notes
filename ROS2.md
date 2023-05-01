@@ -28,3 +28,7 @@ This is for python
 ### 5) Build package ###
 1) Go to workspace directory
 2) ``` colcon build ```
+
+
+### 6) Source bash file of workspace ###
+```source install/setup.bash```
