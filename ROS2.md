@@ -24,3 +24,7 @@ build type has two types
 This for C, C++ cmake
 #### 2) amet_python ###
 This is for python
+
+### 5) Build package ###
+1) Go to workspace directory
+2) ``` colcon build ```
