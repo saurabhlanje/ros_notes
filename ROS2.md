@@ -28,7 +28,15 @@ This is for python
 ### 5) Build package ###
 1) Go to workspace directory
 2) ``` colcon build ```
+3) After building all packages in workspace source the setup.bash file from install folder
 
 
 ### 6) Source bash file of workspace ###
 ```source install/setup.bash```
+
+### 7) List all packages ###
+```ros2 pkg list```
+### 8) Find package with specific keywords ###
+```ros2 pkg list | grep my_package```
+
+
