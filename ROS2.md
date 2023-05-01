@@ -13,3 +13,14 @@ For instance, ROS2 includes real-time features and embedded security, and it is 
 #### ```setup.py``` - File containing instructions for how to compile the package. ####
 #### ```setup.cfg``` - File that defines where the scripts will be installed. ####
 #### ```/<package_name>``` - This directory will always have the same name as your package. You will put all your Python scripts inside this folder. Note that it already contains an empty __init__.py file. ####
+#### Some time additional folder like launch folder might be also present which consist of launch file ####
+
+
+### 4) Create ros2 package ###
+```ros2 pkg create --build-type ament_python <package_name> --dependencies <package_dependencies>```
+Package name and package dependencies is self explanatory
+build type has two types
+#### 1) amet_cmake ####
+This for C, C++ cmake
+#### 2) amet_python ###
+This is for python
