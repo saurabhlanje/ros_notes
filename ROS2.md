@@ -55,5 +55,6 @@ def generate_launch_description():
             output='screen'),
     ])
 ```
-
+### 11) List all Nodes ###
+``` ros2 node list ```
 
