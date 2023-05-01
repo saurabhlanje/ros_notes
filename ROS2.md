@@ -58,3 +58,6 @@ def generate_launch_description():
 ### 11) List all Nodes ###
 ``` ros2 node list ```
 
+### 12)  List all packages with their executables ###
+```ros2 pkg executables```
+
