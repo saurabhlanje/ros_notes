@@ -64,3 +64,7 @@ def generate_launch_description():
 ### 13) No roscore in ROS2 ###
 roscore was a single point failure in ros1. It has been removed in ROS2
 
+### 14) ROS tutorials ###
+```https://medium.com/@nullbyte.in```
+```https://docs.ros.org/en/humble/Tutorials.html```
+
