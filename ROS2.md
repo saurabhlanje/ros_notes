@@ -78,3 +78,5 @@ roscore was a single point failure in ros1. It has been removed in ROS2
 ```rqt```
 rqt provides interface for all ros related things like topics, services, actions, plots
 
+### 17) Remap topic to some other name ###
+```ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel```
