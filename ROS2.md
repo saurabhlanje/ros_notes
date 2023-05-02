@@ -74,3 +74,7 @@ roscore was a single point failure in ros1. It has been removed in ROS2
 ```ros2 service list```
 ```ros2 action list```
 
+### 16) Launch rqt ###
+```rqt```
+rqt provides interface for all ros related things like topics, services, actions, plots
+
