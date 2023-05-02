@@ -112,3 +112,8 @@ rqt provides interface for all ros related things like topics, services, actions
 ### 24) Publish topic for once ###
 ```ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"```
 
+### 25) Differences between ROS 1 and ROS 2
+#### 1) No roscore in ros 2 ####
+#### 2) All commands starts with ros2 and there is space between ros2 and the next part of command ####
+#### 3) ros client libraries are implemented in C only, for python client library only wrapper is made over C. This is just to make it simple and easy to implement any changes to the C code. The functionality remains same irrespective of Node being a python node or C++ node####
+
