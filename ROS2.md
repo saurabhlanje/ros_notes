@@ -83,3 +83,6 @@ rqt provides interface for all ros related things like topics, services, actions
 
 ### 18) Get topic info ###
 ```ros2 node info <node_name>```
+
+### 19) Graph for nodes and topics ###
+```rqt_graph```
