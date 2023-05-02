@@ -105,3 +105,10 @@ rqt provides interface for all ros related things like topics, services, actions
 
 ### 22) Publish topic through cli ###
 ```ros2 topic pub <topic_name> <msg_type> '<args>'```
+
+### 23) Publish topic at 1 hz ###
+```ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"```
+
+### 24) Publish topic for once ###
+```ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"```
+
