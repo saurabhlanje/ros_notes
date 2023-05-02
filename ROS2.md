@@ -80,3 +80,6 @@ rqt provides interface for all ros related things like topics, services, actions
 
 ### 17) Remap topic to some other name ###
 ```ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel```
+
+### 18) Get topic info ###
+```ros2 node info <node_name>```
