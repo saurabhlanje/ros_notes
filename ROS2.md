@@ -61,3 +61,6 @@ def generate_launch_description():
 ### 12)  List all packages with their executables ###
 ```ros2 pkg executables```
 
+### 13) No roscore in ROS2 ###
+roscore was a single point failure in ros1. It has been removed in ROS2
+
