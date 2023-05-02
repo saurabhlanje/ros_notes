@@ -8,4 +8,6 @@
 ``` sudo docker run -it osrf/ros:humble-desktop ```
 5) Get details of running docker imagees
 ``` docker ps -l ```
-6) 
+6) Restart docker
+``` sudo systemctl daemon-reload ```
+```sudo systemctl restart docker```
