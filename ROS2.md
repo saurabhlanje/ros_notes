@@ -93,3 +93,15 @@ rqt provides interface for all ros related things like topics, services, actions
 
 ### 19) Graph for nodes and topics ###
 ```rqt_graph```
+
+### 20) observe topic on cli ###
+```ros2 topic echo <topic_name>```
+
+### 21)  Get topic info ###
+```ros2 topic info /turtle1/cmd_vel```
+
+### 22) Get the pattern of msg ###
+```ros2 interface show geometry_msgs/msg/Twist```
+
+### 22) Publish topic through cli ###
+```ros2 topic pub <topic_name> <msg_type> '<args>'```
