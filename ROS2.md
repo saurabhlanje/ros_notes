@@ -73,7 +73,9 @@ roscore was a single point failure in ros1. It has been removed in ROS2
 
 ```ros2 topic list```
 
-For listing topic type with topic```ros2 topic list -t```
+For listing topic type with topic
+
+```ros2 topic list -t```
 
 ```ros2 service list```
 
