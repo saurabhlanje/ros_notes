@@ -6,3 +6,6 @@
 ```docker pull <image_name>```
 4) Run docker image 
 ``` sudo docker run -it osrf/ros:humble-desktop ```
+5) Get details of running docker imagees
+``` docker ps -l ```
+6) 
