@@ -127,4 +127,6 @@ Get prototype of the message
 ```ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{ ``` and then press tab to get details of interface. It will autocomplete and you will get something like this 
 ``` ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.0}}"```
 
+### Format for topic publishing ###
+``` ros2 topic pub <topic_name> <interface_name> <message>```
 
