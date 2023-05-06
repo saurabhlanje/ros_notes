@@ -103,6 +103,9 @@ rqt provides interface for all ros related things like topics, services, actions
 ### 22) Get the pattern of msg ###
 ```ros2 interface show geometry_msgs/msg/Twist```
 
+Get prototype of the message
+```ros2 interface proto geometry_msgs/msg/Twist```
+
 ### 22) Publish topic through cli ###
 ```ros2 topic pub <topic_name> <msg_type> '<args>'```
 
@@ -117,3 +120,5 @@ rqt provides interface for all ros related things like topics, services, actions
 #### 2) All commands starts with ros2 and there is space between ros2 and the next part of command ####
 #### 3) ros client libraries are implemented in C only, for python client library only wrapper is made over C. This is just to make it simple and easy to implement any changes to the C code. The functionality remains same irrespective of Node being a python node or C++ node####
 
+### Get help for topic ###
+``` ros2 topic -h```
