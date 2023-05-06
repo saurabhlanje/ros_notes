@@ -123,3 +123,8 @@ Get prototype of the message
 ### Get help for topic ###
 ``` ros2 topic -h```
 
+### To publish topic through cli with auto completion you have to type up to this ###
+```ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{ ``` and then press tab to get details of interface. It will autocomplete and you will get something like this 
+``` ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.0}}"```
+
+
