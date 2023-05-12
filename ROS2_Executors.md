@@ -12,4 +12,169 @@ You can configure the executor type and associated parameters in your ROS 2 appl
 | StaticMultiThreadedExecutor        | Executes callbacks concurrently within a static thread pool. Provides control over the number of threads.  |
 | WallRate                           | Executes callbacks at a specified frequency. Useful for time-triggered tasks requiring periodic execution. |
 
-Please note that this table is provided in a markup format for readability. When using the table in an actual document or code, you may need to adjust the formatting to fit the desired context.
+
+# Example of SingleThreadedExecutor: #
+```
+import rclpy
+
+def callback(msg):
+    print('Received message:', msg.data)
+
+def main():
+    rclpy.init()
+    node = rclpy.create_node('single_threaded_node')
+
+    subscription = node.create_subscription(
+        String,
+        'topic',
+        callback,
+        10
+    )
+
+    executor = rclpy.executors.SingleThreadedExecutor()
+    executor.add_node(node)
+
+    try:
+        while rclpy.ok():
+            executor.spin_once()
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+
+# MultiThreadedExecutor #
+```
+import rclpy
+import threading
+
+def callback(msg):
+    print('Received message:', msg.data)
+
+def main():
+    rclpy.init()
+    node = rclpy.create_node('multi_threaded_node')
+
+    subscription = node.create_subscription(
+        String,
+        'topic',
+        callback,
+        10
+    )
+
+    executor = rclpy.executors.MultiThreadedExecutor()
+    executor.add_node(node)
+
+    # Create and start a separate thread for the executor
+    executor_thread = threading.Thread(target=executor.spin)
+    executor_thread.start()
+
+    try:
+        while rclpy.ok():
+            pass  # Main thread can perform other tasks here
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+        executor_thread.join()
+
+if __name__ == '__main__':
+    main()
+```
+
+# StaticSingleThreadedExecutor #
+```
+import rclpy
+
+def callback(msg):
+    print('Received message:', msg.data)
+
+def main():
+    rclpy.init()
+    node = rclpy.create_node('static_single_threaded_node')
+
+    subscription = node.create_subscription(
+        String,
+        'topic',
+        callback,
+        10
+    )
+
+    executor = rclpy.executors.StaticSingleThreadedExecutor()
+    executor.add_node(node)
+
+    try:
+        while rclpy.ok():
+            executor.spin_once()
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+
+```
+
+# StaticMultiThreadedExecutor #
+
+```
+import rclpy
+import threading
+
+def callback(msg):
+    print('Received message:', msg.data)
+
+def main():
+    rclpy.init()
+    node = rclpy.create_node('static_multi_threaded_node')
+
+    subscription = node.create_subscription(
+        String,
+        'topic',
+        callback,
+        10
+    )
+
+    executor = rclpy.executors.StaticMultiThreadedExecutor()
+    executor.add_node(node)
+
+    # Create and start a separate thread for the executor
+    executor_thread = threading.Thread(target=executor.spin)
+    executor_thread.start()
+
+    try:
+        while rclpy.ok():
+            pass  # Main thread can perform other tasks here
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+        executor_thread.join()
+
+if __name__ == '__main__':
+    main()
+
+```
+# WallRate #
+```
+import rclpy
+from std_msgs.msg import String
+
+def main():
+    rclpy.init()
+    node = rclpy.create_node('wall_rate_node')
+
+    publisher = node.create_publisher(String, 'topic', 10)
+
+    rate = node.create_rate(1)  # 1 Hz
+
+    msg = String()
+    msg.data = 'Hello, ROS 2!'
+
+    try:
+        while rclpy.ok():
+            publisher.publish(msg)
+            node.get_logger().info('Published message: %s' % msg
+
+```
+
