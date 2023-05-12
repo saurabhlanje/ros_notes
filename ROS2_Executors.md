@@ -179,3 +179,16 @@ def main():
 
 ```
 
+# Type of Callback Groups #
+
+
+A Callback Group controls when Callbacks are allowed to be executed.
+
+You can find two different Callback Groups:
+
+    ReentrantCallbackGroup: Allows Callbacks to be executed in parallel without restriction.
+
+    MutuallyExclusiveCallbackGroup: Allows only one Callback to be executed at a time.
+
+
+
