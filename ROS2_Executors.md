@@ -190,5 +190,16 @@ You can find two different Callback Groups:
 
     MutuallyExclusiveCallbackGroup: Allows only one Callback to be executed at a time.
 
+# Difference between MutuallyExclusiveCallbackGroup and  ReentrantCallbackGroup #
+
+You have used only MutuallyExclusiveCallbackGroup Callback Groups. This is because they are the default type in ROS2. However, there is another type called ReentrantCallbackGroup.
+
+The main difference is:
+
+    ReentrantCallbackGroup: Any Callback inside this group can be executed in parallel if there are enough threads. For example, if you add three Callbacks inside the same ReentrantCallbackGroup and have two threads, you can simultaneously execute TWO of the THREE Callbacks.
+
+    MutuallyExclusiveCallbackGroup: All the Callbacks inside this group will only be executed one by one in that group, no matter how many threads you have. For example, if you have three Callbacks inside this group and three threads, only ONE Callback at a time will be executed.
+
+
 
 
