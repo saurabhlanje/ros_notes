@@ -93,6 +93,10 @@ rosbag decompress <bag_file>
 Replace `<bag_file>` with the name of the compressed bag file you want to decompress.
 
 These commands should help you get started with using `rosbag` for recording, playing, filtering, and managing bag files in ROS.
+8. Record all topics
+```
+rosbag record -a
+```
 
 
 
