@@ -3,6 +3,8 @@
 #include <services_quiz/BB8CustomServiceMessage.h>
 #include <unistd.h>
 
+//the publisher is defined over here so that it is accessible in all functions
+
 ros::Publisher vel_pub;
 geometry_msgs::Twist vel_msg;
 
