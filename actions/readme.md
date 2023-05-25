@@ -8,7 +8,6 @@
 4) Action file should be in action directory within package directory
 5) Example action file
 ```
-user ~ $ roscd ardrone_as/action; cat Ardrone.action
 #goal for the drone
 int32 nseconds  # the number of seconds the drone will be taking pictures
 ---
@@ -19,3 +18,10 @@ sensor_msgs/CompressedImage[] allPictures # an array containing all the pictures
 sensor_msgs/CompressedImage lastImage  # the last image taken
 
 ```
+
+You can see in the previous step how the message is composed of three parts:
+
+goal: Consists of a variable called nseconds of type Int32. This Int32 type is a standard ROS message, therefore, it can be found in the std_msgs package. Because it's a standard package of ROS, it's not needed to indicate the package where the Int32 can be found.
+result: Consists of a variable called allPictures, an array of type CompressedImage[] found in the sensor_msgs package.
+feedback: Consists of a variable called lastImage of type CompressedImage[] found in the sensor_msgs package.
+You will learn in the second part of this chapter about how to create your own action messages. For now, you must only understand that every time you call an action, the message implied contains three parts, and that each part can contain more than one variable. 
