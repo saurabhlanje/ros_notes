@@ -1,3 +1,4 @@
+#include <ros/ros.h>
 #include <ardrone_as/ArdroneAction.h> // Note: "Action" is appended
 #include <actionlib/client/simple_action_client.h>
 
@@ -6,6 +7,7 @@ int nImage = 0;
 void doneCb(const actionlib::SimpleClientGoalState& state,
             const ardrone_as::ArdroneResultConstPtr& result)
 {
+  ROS_INFO("[State Result]: %s", state.toString().c_str());
   ROS_INFO("The Action has been completed");
   ros::shutdown();
 }
@@ -24,7 +26,7 @@ void feedbackCb(const ardrone_as::ArdroneFeedbackConstPtr& feedback)
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "wait_for_result");
+  ros::init(argc, argv, "drone_action_client");
   actionlib::SimpleActionClient<ardrone_as::ArdroneAction> client("ardrone_action_server", true);
   client.waitForServer();
 
@@ -35,12 +37,16 @@ int main(int argc, char** argv)
   //client.waitForResult();
   
   ros::Rate loop_rate(2);
+  actionlib::SimpleClientGoalState state_result = client.getState();
+  ROS_INFO("[State Result]: %s", state_result.toString().c_str());
     
-  while (client.waitForResult() != true)
+  while ( state_result == actionlib::SimpleClientGoalState::ACTIVE || state_result == actionlib::SimpleClientGoalState::PENDING )
   {
     ROS_INFO("Doing Stuff while waiting for the Server to give a result...");
     loop_rate.sleep();
+    state_result = client.getState();
+    ROS_INFO("[State Result]: %s", state_result.toString().c_str());
   }
-  
+    
   return 0;
 }
