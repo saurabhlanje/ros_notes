@@ -204,8 +204,16 @@ This can be used as
 ```
 rosrun rqt_tf_tree rqt_tf_tree
 ```
+### 27) Monitor all frames being broadcasted ###
+```
+rosrun tf tf_monitor
+```
+### 27) Publish static transform ###
+```
+rosrun tf static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms
+rosrun tf static_transform_publisher x y z qx qy qz qw frame_id child_frame_id  period_in_ms
 
-
+```
 
 
 
