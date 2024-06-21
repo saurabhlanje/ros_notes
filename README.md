@@ -215,5 +215,11 @@ rosrun tf static_transform_publisher x y z qx qy qz qw frame_id child_frame_id  
 
 ```
 
+### 28) Get graphical representation of URDF links and joints ###
+```
+urdf_to_graphiz dolly.urdf
+evince dolly.urdf
+```
+
 
 
