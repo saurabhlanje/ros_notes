@@ -200,6 +200,11 @@ This can be used as
 
 ####b) ####
 
+### 26) Get details of transforms ###
+```
+rosrun rqt_tf_tree rqt_tf_tree
+```
+
 
 
 
