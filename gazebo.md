@@ -13,7 +13,10 @@ gzserver <world_filename>
 ```
 Gazebo can be started with loading a world with in the simulator
 Argument provided to the gazebo command is the path of the world to be opened
-
+All worlds are store at below location in ros noetic
+```
+/usr/share/gazebo-11/worlds
+```
 # 3) Start Gazebo server #
 ```
 gzserver
@@ -58,6 +61,34 @@ This section describes each of the items involved in running a Gazebo simulation
 ~/.gazebo/pictures
 ```
 Path for saving video is asked when video recoding is stopped
-# 7) Model structure and requirements #
+# 7) ROS gazebo #
+## 7.1) Start Gazebo from ROS ##
+```
+roslaunch gazebo_ros empty_world.launch paused:=true use_sim_time:=false gui:=true throttled:=false recording:=false debug:=true verbose:=true gui_required:=true
+```
+* paused = Start Gazebo in a paused state (default false)
+* use_sim_time = Tells ROS nodes asking for time to get the Gazebo-published simulation time, published over the ROS topic /clock (default true)
+* gui = Launch the user interface window of Gazebo (default true)
+* debug = Start gzserver (Gazebo Server) in debug mode using gdb (default false)
+* verbose = Run gzserver and gzclient with --verbose, printing errors and warnings to the terminal (default false)
+* server_required = Terminate launch script when gzserver (Gazebo Server) exits (default false)
+* gui_required = Terminate launch script when gzclient (user interface window) exits (default false)
 
+## 7.2) Using roslaunc file ##
+```
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/mud.world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+</launch>
+```
+Arguments and their effect is same as mentioned above.
+
+  
 
